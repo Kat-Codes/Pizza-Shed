@@ -1,0 +1,332 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~header~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#logo{
+    float:left;
+    width: 45%;
+     
+}
+#logo img {
+  max-width: 70%;
+  margin: 5%;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~general tags~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#nav{
+    float:right;
+    width:50%;
+    margin-top:12.5%;
+    padding-right:3%;
+}
+
+#adminnav{
+    float:left;
+    width:100%;
+}
+
+#titleLogo img{
+    max-width:30%;
+}
+
+#titleLogo{
+    float:left;
+    
+}
+
+.whiteText{
+    color:white;
+}
+
+#headWrap{
+    width: 100%;
+    height: 250px;
+}
+
+textarea {
+    float:left;
+	width: 60%;
+	height: 50%;
+}
+
+p {
+   margin: 2% 2% 2% 2%;
+   font-size: 20px;
+    
+}
+
+body {
+	background-image: url("pizza.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-size: cover;
+	position: 100%;
+	font-family: Calibri, sans-serif;
+    line-height: 1.5em;
+
+}
+
+th, td {
+ 
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+#table {
+    margin-right: 30%
+}
+
+/* centrilising the page */
+#wrapper{ 
+    width: 100%;
+    height:100%;
+	margin: 0px auto; 
+    background:rgba(0,0,0,0.65);
+    color: white; 
+}
+
+.blackText {
+    color: black;
+    font-size: 24px;
+}
+
+#homeText{
+    width:80%;
+    margin: 0px auto;
+    margin-top:2%;
+    text-align: center;
+    
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~navigation~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+li {
+	list-style-type: inline;
+	float: left;
+	font-size: 1.4em;
+}
+
+li a {
+    display: inline;
+    color: #F0F8FF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+
+li a:hover:not(.active) {
+    
+    color: #cc0000;
+}
+
+.active {
+    color: #cc0000;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float:right;
+}
+
+/* -------------- Menu Page ----------------- */
+
+#menuWrap {
+  background:rgba(255,255,255,0.8);
+  width: 70%;
+  margin: 0px auto;
+  padding-right:3%;
+  padding-left:3%;
+  padding-top:3%;
+  padding-bottom:3%;
+  border-radius:10px;
+  text-align:center;
+}
+
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+  border: 2px solid black;
+  padding: 5px;
+  background-color: #8B0000;
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  margin: 15px;
+  
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #8B0000;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+
+/* ------------ Order Page ------------- */
+    
+#hidden {
+    display: none;
+}
+
+#different {
+	border-collapse: collapse;
+	margin: auto;
+    margin-top: 60px;
+	background-color: rgba(255,255,255,0.1);
+	
+}
+
+#different tr:hover {background-color: rgba(255,255,255,0.2)}
+
+#different tr {
+	border: 1px solid rgba(0,0,0,0.03);
+}
+
+#different th {
+	border: 1px solid rgba(0,0,0,0.03);
+}
+
+
+
+/* ---------------Forms----------------------*/
+#FormWrap *,#FormWrap *:before,#FormWrap *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#FormWrap body {
+  font-family: 'Nunito', sans-serif;
+}
+
+#FormWrap form {
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+
+#FormWrap h1 {
+    margin: 0 0 30px 0;
+  text-align: center;
+    color:black;
+}
+
+#FormWrap label{
+    font-size: 20px;
+    color: black;
+}
+
+#FormWrap input[type="text"],
+#FormWrap input[type="password"],
+#FormWrap input[type="email"],
+#FormWrap input[type="tel"],
+#FormWrap textarea,
+#FormWrap select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+}
+
+#FormWrap input[type="radio"],
+#FormWrap input[type="checkbox"] {
+  margin: 0 4px 8px 0;
+}
+
+#FormWrap select {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+}
+
+#FormWrap button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #9ACD32;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #9ACD01;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+}
+
+#FormWrap fieldset {
+  margin-bottom: 30px;
+  border: none;
+}
+
+#FormWrap legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+#FormWrap .number {
+  background-color: #5fcf80;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  border-radius: 100%;
+}
+
+/*@media screen and (min-width: 480px) {
+
+  form {
+    max-width: 600px;
+  }
+
+}*/
+
+
+
+

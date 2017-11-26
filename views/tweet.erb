@@ -1,0 +1,51 @@
+<%=  erb :admin_header %> 
+    
+    <% if @submitted_tweet %>
+        <p> You have submitted the tweet successfully! </p>
+    <% end %>
+
+    
+<main>
+        <div id="FormWrap">
+            <form action='sendTweet' method="POST" name="sendTweet" id="sendTweet">
+            
+                <h1 id="signuptitle">Tweet to twitter</h1>
+    
+                <textarea class="FormElement" name="inputTweet" placeholder="Write tweet here" cols="40" rows="4"></textarea>
+            
+                <button type="submit" form="sendTweet" value="Submit">Tweet</button>
+            </form>         
+        </div>
+                
+    <div id="FormWrap">            
+        <form action='sendTweet2' method="POST" name="sendTweet2" id="sendTweet2">
+
+            <h1 id="signuptitle">Quick tweet Competitions</h1>      
+             <textarea class="FormElement" name="inputTweet" cols="40" rows="2">Retweet this for the chance to win a free pizza! #freePizza</textarea> 
+            <button type="submit" form="sendTweet2" value="Submit">Tweet</button>
+        </form>         
+    </div>
+    <div id="FormWrap">            
+        <form action='pickTweet2' method="POST" name="pickTweet2" id="pickTweet2">
+            <h1 id="signuptitle">Pick random winner for above competition</h1>       
+            <button type="submit" form="pickTweet2" value="Submit">Pick</button>
+        </form>         
+    </div>
+    
+        <div id="FormWrap">
+            <form action='sendTweet3' method="POST" name="sendTweet3" id="sendTweet3">
+           
+                <textarea class="FormElement" name="inputTweet" cols="40" rows="2">2 for 1 after Corp today only!</textarea> 
+            
+                <button type="submit" form="sendTweet3" value="Submit">Tweet</button>
+            </form>         
+        </div>
+        <div id="FormWrap">
+            <form action='sendTweet4' method="POST" name="sendTweet4" id="sendTweet4">
+           
+                <textarea class="FormElement" name="inputTweet" cols="40" rows="2">Like and retweet this tweet to be in with the chance of free pizzas for the year!</textarea> 
+            
+                <button type="submit" form="sendTweet4" value="Submit">Tweet</button>
+            </form>         
+        </div>
+</main>

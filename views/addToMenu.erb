@@ -1,0 +1,27 @@
+<%= erb :admin_header %>
+     <main>   
+        
+        <div id="FormWrap">
+        <form action='/addToMenu' method="POST" name="addToMenu" id="addToMenu">
+           <h1 id="addToMenu">Add a pizza to the menu:</h1>
+           <div> <input type="text" name="pizzaname" placeholder="Name of the pizza:"></div>
+           <div> <input type="text" name="description" placeholder="List of ingredients:">  <br/></div>
+           <div> <input type="text" name="price" placeholder="Price of pizza:"><br/></div> 
+           <div> <input type="text" name="url" placeholder="Pizza image url:"><br/></div>
+         
+           <button type="submit" form="addToMenu" value="Submit">Submit Menu</button>
+            <!-- add image submit box -->
+            
+        </form>         
+        </div> 
+        <div id="FormWrap">
+        <form action='/deleteFromMenu' method="POST" name="deleteFromMenu" id="deleteFromMenu">
+            <h1>Remove a pizza from the menu:</h1>
+            <div><input type="text" name="pizzaID" placeholder="ID for the pizza you want to remove"></div>
+            <button type="submit" form="deleteFromMenu" value="Submit">
+                Delete Entry
+            </button>
+        </form>
+        </div>
+    </main>     
+<%= erb :default_footer %>

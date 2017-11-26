@@ -1,0 +1,25 @@
+<%= erb :admin_header %>
+     <main>   
+        <div id="FormWrap">
+        <form action='/addOffer' method="POST" name="addOffer" id="addOffer">
+           <h1 id="addOffer">Add a Special Offer:</h1>
+           <div> <input type="text" name="offerName" placeholder="Name of the Offer:"></div>
+           <div> <select name="offerLocation">
+                 <option value="Select">Select Offer Location:</option>
+                 <option value="Sheffield">Sheffield</option>
+                 <option value="London">London</option>
+                 <option value="Both">Both</option>
+                 </select>
+           </div> 
+           <div><input type="text" name="offerHash" placeholder="Offer Hashtag: "></div>
+           <div><input type="text" name="offerStart" placeholder="Start Date: DD/MM/YYYY :"></div> 
+           <div><input type="text" name="offerExpiry" placeholder="Expiry Date: DD/MM/YYYY :"></div>            
+           <div><input type="text" name="offerPrice" placeholder="Offer Price:"></div>
+           <div> <input type="text" name="offerUrl" placeholder="Offer Image URL:"><br/></div>
+         
+           <button type="submit" form="addOffer" value="Submit">Submit Offer</button>
+            <!-- add image submit box -->
+        </form>         
+        </div> 
+    </main>     
+<%= erb :default_footer %>

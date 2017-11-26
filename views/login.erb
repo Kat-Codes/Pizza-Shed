@@ -1,0 +1,27 @@
+<%= erb :defaultheader %>
+
+    <% if @submitted_login %>
+        <% if @password != @password_correct %>
+             <p style="color:red" > Your username or password was incorrect</p>
+        <% elsif @password == @password_correct  %>
+           <p> Logged in!</p>
+        <% end %>
+    <% end %>
+
+     <main>   
+         
+        <div id="FormWrap">         
+            <form action='/login' method="POST" name="login" id="login">
+                <h1>Log In</h1>   
+                <label for="username">Username</label>
+                <input type="text" name="username" placeholder="Your username..">
+                
+                <label for="pass">Password</label>
+                <input type="password" name="password" placeholder="Your password.."> <br/>       
+                <button type="submit" form="login" value="Submit">Log In</button>
+            </form> 
+        </div>        
+         
+         
+</main>
+<%= erb :default_footer %>

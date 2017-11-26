@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>The Pizza Shed</title>
+  <link rel="stylesheet" type="text/css" href="myStyle.css">
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+    $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('active'); $(this).parents('li').addClass('active');
+            }
+        });
+    });
+</script>
+   
+</head>    
+    
+<header>
+    <meta charset="utf-8">
+ </header>
+    
+<body>
+    <div id = "wrapper">
+        
+    <div id="headWrap">
+        <div id ="logo">
+            <img src="logo.png" alt="logo">
+        </div>
+
+    <div id=admin_nav>
+    <nav>
+        <ul class="top">
+            <li><a href="/admin">Admin Home</a></li>
+            <li><a href="/orders">Orders</a></li>
+            <li><a href="/questions">Questions</a></li>
+            <li><a href="/addToMenu">Add Pizza</a></li>
+            <li><a href="/addOffer">Add Special Offer</a></li>
+            <li><a href="/accountManager">Add Account</a></li>
+            <li><a href="/tweet">Create Tweet</a></li>
+            <li><a href="/logout">Log out</a></li>
+        </ul>
+    </nav>
+        </div>
+        </div>

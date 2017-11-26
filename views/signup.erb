@@ -1,0 +1,70 @@
+
+<%= erb :defaultheader %>
+
+ <% if @all_ok && @submitted %>
+        <p>You have signed up successfully!</p>
+    <% else  %>
+        <% if !@twitterhandle_ok && @submitted %>
+            <p style="color: white; font-size: 23px; padding-left: 40%;">The twitter handle you entered has already been used</p>
+       
+        <% elsif @submitted && @firstname.nil? || @lastname.nil? || @postcode.nil? || @twitterhandle.nil? || @password.nil? || @addressline1.nil? || @postcode.nil? || @city.nil? %>
+            <p style="color: white; font-size: 23px; padding-left: 40%;">Please fill out all details</p>
+        
+        <% elsif !@username_unique && @submitted %>
+            <p style="color: white; font-size: 23px; padding-left: 40%;">The username entered has already been registered on the site</p>
+        
+        <% elsif !@email_unique && @submitted %>
+            <p style="color: white; font-size: 23px; padding-left: 40%;">The email address entered has already been registered on the site</p>
+        
+        <% elsif !@email_ok && @submitted %>
+            <p style="color: white; font-size: 23px; padding-left: 40%;">Please enter a valid email address</p>
+        
+        <% elsif !@email_unique && @submitted %>
+            <p style="color: white; font-size: 23px; padding-left: 40%;">The email entered is already registered on the site</p>   
+        
+        <% elsif !@postcode_ok && @submitted %>
+            <p style="color: white; font-size: 23px; padding-left: 40%;">Please enter a valid postcode</p>
+    <% end %>
+
+<% end %>
+
+     <main>   
+         
+        <div id="FormWrap">
+        <form action='/signup' method="POST" name="Tweet to twitter" id="signup">
+            <h1 id="signuptitle">Sign Up</h1>
+          
+            <label for="fname">First Name</label>
+            <input type="text" name="firstname" placeholder="Your name.."> 
+            
+            <label for="lname">Last Name</label>
+            <input type="text" name="lastname" placeholder="Your last name.."> 
+            
+            <label for="twitter">Twitter Handle</label>
+            <input type="text" name="twitterhandle" placeholder="Your twitter handle..">
+            
+            <label for="uname">Username</label>
+            <input type="text" name="username" placeholder="Your username..">     
+            
+            <label for="pass">Password</label>
+            <input type="password" name="password" placeholder="Your password..">              
+            
+            <label for="email">Email Address</label>
+            <input type="email" name="email" placeholder="Your email..">
+            
+            <label for="address">Address</label>
+            <input type="text" name="addressline1" placeholder="Address Line 1"> 
+            <input type="text" name="addressline2" placeholder="Address Line 2">   
+            <input type="text" name="postcode" placeholder="Post Code"> 
+            
+            <label for="city">City</label>
+            <select name="city">
+                <option value="sheffield" name="sheffield">Sheffield</option>
+                <option value="london" name="london" >London</option>
+            </select>
+            
+            <button type="Submit" form="signup" value="Submit">Sign Up</button>
+        </form>         
+        </div>
+               
+</main>

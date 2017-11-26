@@ -1,0 +1,91 @@
+
+<%= erb :admin_header %>
+<% if @submitted_acc %>
+    <% if @account_added && @all_ok %>
+        <p> <% @username %> added successfully! </p>
+    <% else  %>
+        <% if @firstname.nil? || @username.nil? || @lastname.nil? || @password.nil? %>
+            <p style="color:red" > Please fill out all details</p>
+        <% end %>
+        <% if !@email_ok  %>
+            <p style="color:red"> Please enter a valid email address</p>  
+        <% end %>
+    <% end %>
+<% end %>
+
+
+<% if @submitted_update %>
+    <% if @userID_ok %>
+            <p> <% @username %> updated successfully! </p>
+    <% else  %>      
+        <p style="color:red" > username does not exist or isn't an admin</p>
+    <% end %>
+<% end %>
+
+
+
+     <main>   
+    
+        <div id="FormWrap">
+        <form action='addAccount' method="POST" name="addAccount" id="addAccount">
+           <h1 id="signuptitle">Add Account</h1>
+           <div> <input type="text" name="firstname" placeholder="First Name"> </div>
+           <div> <input type="text" name="lastname" placeholder="Last Name">  <br/></div>
+           <div> <input type="text" name="username" placeholder="Username">  </div>        
+           <div> <input type="password" name="password" placeholder="Password"> <br/></div>                 
+           <div> <input type="email" name="email" placeholder="Email"></div>           
+           <div> <font color="black">London Order Priviledge:    </font>
+                <input type="radio" name="londonOP" value="yes" checked><font color="black">    Yes </font>
+                <input type="radio" name="londonOP" value="no"><font color="black"> No </font> <br/>
+           </div>
+           <div> <font color="black">Sheffield Order Priviledge:    </font>
+                <input type="radio" name="sheffieldOP" value="yes" checked><font color="black"> Yes </font>
+                <input type="radio" name="sheffieldOP" value="no"><font color="black"> No  </font><br/>
+           </div> 
+           <div> <font color="black">Account Manager Priviledge:    </font>
+                <input type="radio" name="accountsP" value="yes" checked><font color="black"> Yes </font>
+                <input type="radio" name="accountsP" value="no"><font color="black"> No  </font><br/>
+           </div>
+           <div> <font color="black">Menu Priviledge:    </font>
+                <input type="radio" name="menuP" value="yes" checked><font color="black"> Yes </font>
+                <input type="radio" name="menuP" value="no"><font color="black"> No  </font><br/>
+           </div> 
+           <div> <font color="black">Marketing Priviledge:    </font>
+                <input type="radio" name="marketingP" value="yes" checked><font color="black"> Yes </font>
+                <input type="radio" name="marketingP" value="no"><font color="black"> No </font> <br/>
+           </div>
+            
+           <button type="submit" form="addAccount" value="Submit">Sign Up</button>
+        </form>         
+        </div> 
+         
+         <div id="FormWrap">
+             <form action='changePriviledges' method="POST" name="changePriviledges" id="changePriviledges">
+                  <h1 id="signuptitle">Change Priviledges</h1>        
+                  <div> <input type="text" name="username" placeholder="Username">  </div>        
+                  <div> <font color="black">London Order Priviledge:    </font>
+                      <input type="radio" name="londonOP" value="yes" checked><font color="black">    Yes </font>
+                      <input type="radio" name="londonOP" value="no"><font color="black"> No </font> <br/>
+                  </div>
+                  <div> <font color="black">Sheffield Order Priviledge:    </font>
+                      <input type="radio" name="sheffieldOP" value="yes" checked><font color="black"> Yes </font>
+                      <input type="radio" name="sheffieldOP" value="no"><font color="black"> No  </font><br/>
+                  </div> 
+                  <div> <font color="black">Account Manager Priviledge:    </font>
+                      <input type="radio" name="accountsP" value="yes" checked><font color="black"> Yes </font>
+                      <input type="radio" name="accountsP" value="no"><font color="black"> No  </font><br/>
+                  </div>
+                  <div> <font color="black">Menu Priviledge:    </font>
+                      <input type="radio" name="menuP" value="yes" checked><font color="black"> Yes </font>
+                      <input type="radio" name="menuP" value="no"><font color="black"> No  </font><br/>
+                  </div> 
+                  <div> <font color="black">Marketing Priviledge:    </font>
+                      <input type="radio" name="marketingP" value="yes" checked><font color="black"> Yes </font>
+                      <input type="radio" name="marketingP" value="no"><font color="black"> No </font> <br/>
+                  </div>
+                  <button type="submit" form="changePriviledges" value="Submit">Change!</button>
+             </form>         
+         </div>    
+
+</main>  
+

@@ -1,0 +1,26 @@
+<%= erb :defaultheader %>
+    <main>
+        
+        <div id="menuWrap">
+            <h1 class="blackText">Our Menu</h1>
+            <h3 class="blackText">To make an order go to our twitter account!</h3>
+      
+            <% @results.each do |record| %>
+            <div class="container">
+                <p class="blackText"> <%=h record[1]%> </p>
+                <img src="<%=h record[4] %>" alt="Pizza" class="image" style="width:80%">
+                <div  class="middle">
+                    <menu>
+                    <div class="text"> <%=h record[0] %> </div> 
+                    <div class="text"> <%=h record[3] %> </div>
+                    <div class="text"> £<%=h record[2] %> </div>
+                    </menu>
+                </div>
+                
+            </div>
+            <% end %>
+        </div>
+        
+    </main>
+ 
+<%= erb :default_footer %>

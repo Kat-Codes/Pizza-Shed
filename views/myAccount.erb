@@ -1,0 +1,46 @@
+<%= erb :defaultheader %>
+        
+     <main>   
+         <table id="table">
+             <tr>
+                 <th>Username</th>
+                 <th>First Name</th>
+                 <th>Surname</th>
+                 <th>Email</th>
+                 <th>Twitter Handle</th>
+                 <th>Address Line 1</th>
+                 <th>Address Line 2</th>
+                 <th>postcode</th>
+                 <th>City</th>        
+             </tr>
+             <tr>
+                 <% @results.each do |details| %>                      
+                    <td><%=h details %></td>    
+                 <% end %>
+             <tr>
+        </table>
+         <br><br>
+         
+         
+        <div id="FormWrap">
+            <form action='changeDetails' method="POST" name="changeDetails" id="changeDetails">
+                <h1 id="signuptitle">Change Details</h1>
+                <div> <input type="text" name="username" placeholder="Username">  </div> 
+                <div> <input type="password" name="password" placeholder="Password"> <br/></div>   
+               <div> <input type="text" name="firstname" placeholder="First Name"> </div>
+               <div> <input type="text" name="lastname" placeholder="Last Name">  <br/></div>
+                <div> <input type="email" name="email" placeholder="Email"></div>
+                <div> <input type="text" name="twitterhandle" placeholder="Twitter Handle"><br/></div>                             
+               <div> <input type="text" name="addressline1" placeholder="Address Line 1"> <br/></div>
+               <div> <input type="text" name="addressline2" placeholder="Address Line 2"> </div>
+               <div> <input type="text" name="postcode" placeholder="Post Code"> <br/></div>>
+               <select name="city">
+                    <option value="sheffield" name="sheffield">Sheffield</option>
+                    <option value="london" name="london" >London</option>
+                </select> 
+               <button type="submit" form="changeDetails" value="Submit">Change!</button>
+            </form>         
+        </div>     
+         
+    </main>     
+<%= erb :default_footer %>
